@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>RolePlay Creating form</title>
+
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h3 class="pt-5">Könyv létrehozás</h3>
+
+       <div class="row">
+        <div class="col-md-4 mt-5">
+            <form method="post"
+                  th:action="@{/book-collection/create}">
+                <div class="form-group">
+                    <label for="title">Könyv készítő form</label>
+                </div>
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text"
+                           id="id"
+                           name="id"
+                           readonly
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="author">Szerző</label>
+                    <input type="text"
+                           id="author"
+                           name="author"
+                           class="form-control"
+                           />
+                </div>
+                <div class="form-group">
+                    <label for="title">Cím</label>
+                    <input type="text"
+                           id="title"
+                           name="title"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="genre">Műfaj</label>
+                    <input type="text"
+                           id="genre"
+                           name="genre"
+                           class="form-control"
+                          />
+                </div>
+                <div class="form-group">
+                    <label for="rating">Értékelés</label>
+                    <input type="text"
+                           id="rating"
+                           name="rating"
+                           class="form-control"
+                           />
+                </div>
+
+                <button class="btn btn-primary pt-2 mt-2"
+                        type="submit">Könyv készítés
+                </button>
+                <a th:href="@{/book-collection/create}"
+                   class="btn btn-secondary pt-2 mt-2"
+                   type="submit">Mégsem</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
